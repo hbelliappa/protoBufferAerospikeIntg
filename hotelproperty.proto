@@ -1,0 +1,89 @@
+syntax = "proto2";
+package aerospiketest;
+
+option java_package = "com.priceline.hotelapi.retail.aerospike.genfiles";
+option java_outer_classname = "HotelPropertyProtos";
+
+message HotelProperty {
+	required int64 hotelId = 1;
+	required string hotelName = 2;
+	optional string chainCode = 3;
+	optional string countryCode = 4;
+	optional string pegChainCode = 5;
+	optional string worldspanChainCode = 6;
+	optional string pegPropertyCode = 7;
+	optional int64 brandId = 8;
+	optional string brandName = 9;
+	optional int64 cityId = 10;
+	optional double latitude = 11;
+	optional double longitude = 12;
+	optional string javaTimezoneId = 13;
+	optional int64 zoneId = 14;
+	optional int64 clusterIdV2 = 15;
+
+	optional double starRating = 16;
+	optional bool samedayBookingAllowed = 17;
+	optional int32 maxRoomResidents = 18;
+	optional int64 bkgHotelId = 19;
+	optional int64 hbsHotelId = 20;
+	optional int64 trcHotelId = 21;
+	
+	optional bool taxIncludedFlag = 22;
+	optional bool inclusiveRateFlag = 23;
+	optional string clusterName = 24;
+	optional bool nonPclnPaymentSupported =25;
+	optional int64 minCheckInAge = 26;
+	optional bool beddingEnabledFlag = 27;
+	optional bool displayOnExpressDealsFlag = 28;
+	optional bool usePclnDescriptionFlag = 29;
+	optional bool childrenAllowedFlag = 30;
+	
+	required HotelControlFlag hotelControlFlag = 31;
+	
+	message HotelControlFlag{
+		
+	optional bool retailEnabled = 1;
+	optional bool semiOpaqueEnabled = 2;
+	optional bool opaqueEnabled = 3;
+
+	optional bool pegsMerchantEnabled = 4;
+	optional bool enetMerchantEnabled = 5;
+	optional bool bkgAgencyEnabled = 6;
+	optional bool agdAgencyEnabled = 7;
+	optional bool hbsMerchantEnabled = 8;
+	optional bool agdMerchantEnabled = 9;
+
+	optional bool sopqWSPNOpaqueEnabled = 10;
+	optional bool sopqTRCOpaqueEnabled = 11;
+	optional bool sopqENETOpaqueEnabled = 12;
+	optional bool sopqPEGSMerchantEnabled = 13;
+	optional bool sopqENETMerchantEnabled = 14;
+	optional bool sopqHBSOpaqueEnabled = 15;
+	optional bool sopqHBSMerchantEnabled = 16;
+	optional bool sopqAGDOpaqueEnabled = 17;
+	optional bool sopqAGDMerchantEnabled = 18;
+	
+	optional bool nyopWSPNOpaqueEnabled = 19;
+	optional bool nyopTRCOpaqueEnabled = 20;
+	optional bool nyopENETOpaqueEnabled = 21;
+	optional bool nyopPEGSMerchantEnabled = 22;
+	optional bool nyopENETMerchantEnabled = 23;
+	optional bool nyopHBSOpaqueEnabled = 24;
+	optional bool nyopHBSMerchantEnabled = 25;
+	optional bool nyopAGDOpaqueEnabled = 26;
+	optional bool nyopAGDMerchantEnabled = 27;
+
+	optional bool aaaWSPNAgencyenabled = 28;
+	optional string wspnRateAccessCode = 29;
+	optional bool pkgOpaEnabledFlag = 30;
+	optional bool sopqDiscENETEnabled = 31;
+	optional bool sopqENETEnabled = 32;
+	
+	optional bool pkgOpqHBSEnabled = 33;
+	optional bool pkgBkgAgencyEnabled = 34;
+	optional bool pkgOpqTRCEnabled = 35;
+
+	}
+	
+	
+}
